@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【EP04】多益600核心單字・打底特訓</title>
+    <title>【EP04】多益600核心單字・基礎打底特訓</title>
     <style>
         :root {
             --primary: #2c3e50;
@@ -83,7 +83,7 @@
 <body>
 
 <div class="container">
-    <img src="banner.jpg" id="main-banner" alt="EP04 打底特訓" class="banner"> 
+    <img src="banner.jpg" id="main-banner" alt="基礎打底特訓" class="banner"> 
 
     <div class="content-padding">
         <div id="intro-area" class="intro-header">
@@ -139,57 +139,57 @@
 </div>
 
 <script>
-// EP04 核心資料庫：單字辨析考核單字本身含義並加入誘答，句型搭配採純底線挖空
+// 基礎打底特訓 76–100 核心資料庫
 const rawData = [
-    { type: "單字辨析", word: "<u><b>introduce</b></u>", show: "引進、介紹", ans: true, feedback: "introduce 是動詞「引進、介紹」。" },
+    { type: "單字辨析", word: "<u><b>introduce</b></u> a new service package", show: "引進;介紹", ans: true, feedback: "introduce 是動詞「引進;介紹」。" },
     { type: "句型搭配", word: "introduce", show: "______ a new service package / 填入：introduce", ans: true, feedback: "應填入 introduce。" },
-    { type: "單字辨析", word: "<u><b>previous</b></u>", show: "未來的", ans: false, feedback: "previous 是形容詞「先前的」。" },
+    { type: "單字辨析", word: "have no <u><b>previous</b></u> experience in sales", show: "未來的", ans: false, feedback: "previous 是形容詞「先前的」。" },
     { type: "句型搭配", word: "previous", show: "have no ______ experience in sales / 填入：previous", ans: true, feedback: "應填入 previous。" },
-    { type: "單字辨析", word: "<u><b>proposal</b></u>", show: "合約", ans: false, feedback: "proposal 是名詞「提案、建議」。" },
+    { type: "單字辨析", word: "review a contract <u><b>proposal</b></u>", show: "合約書", ans: false, feedback: "proposal 是名詞「提案」。" },
     { type: "句型搭配", word: "proposal", show: "review a contract ______ / 填入：proposal", ans: true, feedback: "應填入 proposal。" },
-    { type: "單字辨析", word: "<u><b>supply</b></u>", show: "必需品、供應品", ans: true, feedback: "supply 是名詞「必需品、供應品」。" },
+    { type: "單字辨析", word: "office <u><b>supply</b></u> order", show: "必需品、供應品", ans: true, feedback: "supply 是名詞「必需品、供應品」。" },
     { type: "句型搭配", word: "supply", show: "office ______ order / 填入：supply", ans: true, feedback: "應填入 supply。" },
-    { type: "單字辨析", word: "<u><b>enclose</b></u>", show: "隨函附上", ans: true, feedback: "enclose 是動詞「隨函附上」。" },
+    { type: "單字辨析", word: "My application is <u><b>enclosed</b></u>.", show: "隨函附上", ans: true, feedback: "enclose 是動詞「隨函附上」。" },
     { type: "句型搭配", word: "enclose", show: "My application is ______ . / 填入：enclosed", ans: true, feedback: "應填入 enclosed。" },
-    { type: "單字辨析", word: "<u><b>policy</b></u>", show: "保險、賠償", ans: false, feedback: "policy 是名詞「政策、方針」。" },
+    { type: "單字辨析", word: "returns <u><b>policy</b></u> for online purchases", show: "保險理賠", ans: false, feedback: "policy 是名詞「政策、方針」。" },
     { type: "句型搭配", word: "policy", show: "returns ______ for online purchases / 填入：policy", ans: true, feedback: "應填入 policy。" },
-    { type: "單字辨析", word: "<u><b>register</b></u>", show: "登記、報名", ans: true, feedback: "register 是動詞「登記、報名」。" },
+    { type: "單字辨析", word: "<u><b>register</b></u> for a workshop", show: "登記、報名", ans: true, feedback: "register 是動詞「登記、報名」。" },
     { type: "句型搭配", word: "register", show: "______ for a workshop / 填入：register", ans: true, feedback: "應填入 register。" },
-    { type: "單字辨析", word: "<u><b>arrange</b></u>", show: "拒絕", ans: false, feedback: "arrange 是動詞「安排、整理」。" },
+    { type: "單字辨析", word: "<u><b>arrange</b></u> a staff meeting", show: "取消、拒絕", ans: false, feedback: "arrange 是動詞「安排;整理」。" },
     { type: "句型搭配", word: "arrange", show: "______ a staff meeting / 填入：arrange", ans: true, feedback: "應填入 arrange。" },
-    { type: "單字辨析", word: "<u><b>bill</b></u>", show: "帳單", ans: true, feedback: "bill 是名詞「帳單」。" },
+    { type: "單字辨析", word: "receive a utility <u><b>bill</b></u>", show: "帳單", ans: true, feedback: "bill 是名詞「帳單」。" },
     { type: "句型搭配", word: "bill", show: "receive a utility ______ / 填入：bill", ans: true, feedback: "應填入 bill。" },
-    { type: "單字辨析", word: "<u><b>hire</b></u>", show: "解僱", ans: false, feedback: "hire 是動詞「僱用」。" },
+    { type: "單字辨析", word: "<u><b>hire</b></u> new staff", show: "解僱、開除", ans: false, feedback: "hire 是動詞「僱用」。" },
     { type: "句型搭配", word: "hire", show: "______ new staff / 填入：hire", ans: true, feedback: "應填入 hire。" },
-    { type: "單字辨析", word: "<u><b>approve</b></u>", show: "批准、贊成", ans: true, feedback: "approve 是動詞「批准、贊成」。" },
+    { type: "單字辨析", word: "<u><b>approve</b></u> a budget", show: "批准、贊成", ans: true, feedback: "approve 是動詞「批准、贊成」。" },
     { type: "句型搭配", word: "approve", show: "______ a budget / 填入：approve", ans: true, feedback: "應填入 approve。" },
-    { type: "單字辨析", word: "<u><b>conduct</b></u>", show: "執行、實施", ans: true, feedback: "conduct 是動詞「執行、實施」。" },
+    { type: "單字辨析", word: "<u><b>conduct</b></u> market research", show: "執行、實施", ans: true, feedback: "conduct 是動詞「執行、實施」。" },
     { type: "句型搭配", word: "conduct", show: "______ market research / 填入：conduct", ans: true, feedback: "應填入 conduct。" },
-    { type: "單字辨析", word: "<u><b>opportunity</b></u>", show: "危機", ans: false, feedback: "opportunity 是名詞「機會、良機」。" },
+    { type: "單字辨析", word: "an <u><b>opportunity</b></u> to work abroad", show: "危機、威脅", ans: false, feedback: "opportunity 是名詞「機會、良機」。" },
     { type: "句型搭配", word: "opportunity", show: "an ______ to work abroad / 填入：opportunity", ans: true, feedback: "應填入 opportunity。" },
-    { type: "單字辨析", word: "<u><b>deadline</b></u>", show: "截止時間、期限", ans: true, feedback: "deadline 是名詞「截止時間、期限」。" },
+    { type: "單字辨析", word: "the <u><b>deadline</b></u> for submission", show: "截止時間、期限", ans: true, feedback: "deadline 是名詞「截止時間、期限」。" },
     { type: "句型搭配", word: "deadline", show: "the ______ for submission / 填入：deadline", ans: true, feedback: "應填入 deadline。" },
-    { type: "單字辨析", word: "<u><b>corporate</b></u>", show: "個人的", ans: false, feedback: "corporate 是形容詞「企業的、法人的」。" },
+    { type: "單字辨析", word: "a <u><b>corporate</b></u> client", show: "個人的、私人的", ans: false, feedback: "corporate 是形容詞「企業的、法人的」。" },
     { type: "句型搭配", word: "corporate", show: "a ______ client / 填入：corporate", ans: true, feedback: "應填入 corporate。" },
-    { type: "單字辨析", word: "<u><b>warranty</b></u>", show: "保固", ans: true, feedback: "warranty 是名詞「保固」。" },
+    { type: "單字辨析", word: "a two-year <u><b>warranty</b></u>", show: "保固", ans: true, feedback: "warranty 是名詞「保固」。" },
     { type: "句型搭配", word: "warranty", show: "a two-year ______ / 填入：warranty", ans: true, feedback: "應填入 warranty。" },
-    { type: "單字辨析", word: "<u><b>necessary</b></u>", show: "非必要的", ans: false, feedback: "necessary 是形容詞「必要的」。" },
+    { type: "單字辨析", word: "<u><b>necessary</b></u> travel documents", show: "多餘的、非必要的", ans: false, feedback: "necessary 是形容詞「必要的」。" },
     { type: "句型搭配", word: "necessary", show: "______ travel documents / 填入：necessary", ans: true, feedback: "應填入 necessary。" },
-    { type: "單字辨析", word: "<u><b>reserve</b></u>", show: "預約、保留", ans: true, feedback: "reserve 是動詞「預約、保留」。" },
+    { type: "單字辨析", word: "<u><b>reserve</b></u> a table at a restaurant", show: "預約、保留", ans: true, feedback: "reserve 是動詞「預約、保留」。" },
     { type: "句型搭配", word: "reserve", show: "______ a table at a restaurant / 填入：reserve", ans: true, feedback: "應填入 reserve。" },
-    { type: "單字辨析", word: "<u><b>resident</b></u>", show: "訪客", ans: false, feedback: "resident 是名詞「居民」。" },
+    { type: "單字辨析", word: "local <u><b>residents</b></u>", show: "觀光客、訪客", ans: false, feedback: "resident 是名詞「居民」。" },
     { type: "句型搭配", word: "resident", show: "local ______ s / 填入：residents", ans: true, feedback: "應填入 residents。" },
-    { type: "單字辨析", word: "<u><b>create</b></u>", show: "創造、發明", ans: true, feedback: "create 是動詞「創造、發明」。" },
+    { type: "單字辨析", word: "<u><b>create</b></u> a marketing campaign", show: "創造、發明", ans: true, feedback: "create 是動詞「創造、發明」。" },
     { type: "句型搭配", word: "create", show: "______ a marketing campaign / 填入：create", ans: true, feedback: "應填入 create。" },
-    { type: "單字辨析", word: "<u><b>inform</b></u>", show: "隱瞞", ans: false, feedback: "inform 是動詞「通知，告知」。" },
+    { type: "單字辨析", word: "We are pleased to <u><b>inform</b></u> you that", show: "隱瞞、隱藏", ans: false, feedback: "inform 是動詞「通知，告知」。" },
     { type: "句型搭配", word: "inform", show: "We are pleased to ______ you that / 填入：inform", ans: true, feedback: "應填入 inform。" },
-    { type: "單字辨析", word: "<u><b>allow</b></u>", show: "允許", ans: true, feedback: "allow 是動詞「允許」。" },
+    { type: "單字辨析", word: "<u><b>allow</b></u> employees to work remotely", show: "允許", ans: true, feedback: "allow 是動詞「允許」。" },
     { type: "句型搭配", word: "allow", show: "______ employees to work remotely / 填入：allow", ans: true, feedback: "應填入 allow。" },
-    { type: "單字辨析", word: "<u><b>mention</b></u>", show: "忽略", ans: false, feedback: "mention 是動詞「提到，提及」。" },
+    { type: "單字辨析", word: "What problem does the woman <u><b>mention</b></u>?", show: "忽略、未提及", ans: false, feedback: "mention 是動詞「提到，提及」。" },
     { type: "句型搭配", word: "mention", show: "What problem does the woman ______ ? / 填入：mention", ans: true, feedback: "應填入 mention。" },
-    { type: "單字辨析", word: "<u><b>appreciate</b></u>", show: "感謝", ans: true, feedback: "appreciate 是動詞「感謝」。" },
+    { type: "單字辨析", word: "I really <u><b>appreciate</b></u> your help.", show: "感謝", ans: true, feedback: "appreciate 是動詞「感謝」。" },
     { type: "句型搭配", word: "appreciate", show: "I really ______ your help. / 填入：appreciate", ans: true, feedback: "應填入 appreciate。" },
-    { type: "單字辨析", word: "<u><b>replacement</b></u>", show: "消耗品", ans: false, feedback: "replacement 是名詞「更換，替換」。" },
+    { type: "單字辨析", word: "<u><b>replacement</b></u> parts for the machine", show: "拋棄式、消耗品", ans: false, feedback: "replacement 是名詞「更換，替換」。" },
     { type: "句型搭配", word: "replacement", show: "______ parts for the machine / 填入：replacement", ans: true, feedback: "應填入 replacement。" }
 ];
 
@@ -223,7 +223,7 @@ function loadQuestion() {
     } else {
         wordEl.style.display = 'block';
         wordEl.innerHTML = q.word; 
-        document.getElementById('content').innerText = `中文意思：${q.show}`;
+        document.getElementById('content').innerText = `這個字的意思是：${q.show}`;
     }
     
     document.getElementById('feedback').style.display = 'none';
@@ -265,10 +265,10 @@ function showResult() {
     const now = new Date();
     const timeStr = `${now.getMonth() + 1}/${now.getDate()} ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
 
-    let history = JSON.parse(localStorage.getItem('toeic_history_ep04_v1')) || [];
+    let history = JSON.parse(localStorage.getItem('toeic_history_ep04_v3')) || [];
     history.unshift({ score: score, time: timeStr });
     if(history.length > 5) history.pop();
-    localStorage.setItem('toeic_history_ep04_v1', JSON.stringify(history));
+    localStorage.setItem('toeic_history_ep04_v3', JSON.stringify(history));
     renderHistoryList(history);
 
     document.getElementById('review-list').innerHTML = userHistoryList.map(item => `
@@ -295,7 +295,7 @@ function renderHistoryList(history) {
 
 function confirmClear() {
     if (confirm("確定要清除所有練習紀錄嗎？")) {
-        localStorage.removeItem('toeic_history_ep04_v1');
+        localStorage.removeItem('toeic_history_ep04_v3');
         renderHistoryList([]);
     }
 }
